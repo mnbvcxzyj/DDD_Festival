@@ -1,16 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import TOPIMG from "../img/TopImg.png";
-import Zoom from "./ZoomStamp";
+import ZoomStamp from "./ZoomStamp";
 
 const Background = styled.div`
   background: #fffcf6;
   padding-bottom: 5%;
+  max-width: 1280px;
 `;
 
 const TopImg = styled.div`
-  margin: 0 auto;
   height: 120px;
+  position: relative;
+  font-weight: 700;
 `;
 
 const ImageBox = styled.div`
@@ -18,8 +20,7 @@ const ImageBox = styled.div`
   width: 327px;
   border: 2px solid #e0c895;
   border-radius: 10px 10px 0px 0px;
-  margin: 0 auto;
-  margin-top: 5%;
+  margin: 5% auto 0;
 `;
 
 const WhiteBox = styled.div`
@@ -66,37 +67,27 @@ const TextContents = styled.text`
 
 const Title = styled.div`
   position: absolute;
-  width: 130px;
-  height: 23px;
-  top: 24px;
+  top: 20px;
   margin-left: 5%;
-  font-weight: 700;
   font-size: 20px;
-  line-height: 23px;
   color: #ffffff;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 `;
 
 const Contents = styled.text`
-  position: absolute;
-  width: 350px;
-  height: 32px;
-  top: 71px;
-  margin-left: 5%;
-  font-weight: 700;
-  font-size: 14px;
   line-height: 16px;
+  position: absolute;
+  top: 58px;
+  font-size: 14px;
+  margin-left: 5%;
   color: #fffcf6;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-  text-align: left;
 `;
 
 const Text = styled.div`
   width: 200px;
   height: 16px;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 16px;
   color: #5f4637;
   margin: 5% auto -5%;
   text-align: center;
@@ -108,18 +99,18 @@ function Stamp() {
       <TopImg>
         <Title>스탬프 투어</Title>
         <Contents>
-          프로그램 부스를 참여하고 나면 도장을 찍어주는 프로그램
-          <br />
-          해리포터의 발자국 지도를 모티브
+          프로그램 부스를 참여하고 나면 도장을 찍어주는 프로그램 <br />
+          해리포터의 발자국 지도를 모티브{" "}
         </Contents>
         <img
           src={TOPIMG}
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
-        ></img>
+          alt="우리학교"
+        />
       </TopImg>
       <Text>*지도를 확대하세요</Text>
       <ImageBox>
-        <Zoom></Zoom>
+        <ZoomStamp></ZoomStamp>
       </ImageBox>
       <WhiteBox>
         <Adress>

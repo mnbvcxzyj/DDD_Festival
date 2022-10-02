@@ -6,7 +6,7 @@ import EventMap from "./event/EventMap";
 import SomTalk from "./talk/SomTalk";
 import Home from "./main/Home";
 import Map from "./main/Map";
-import Stamp from "./main/Map";
+import Stamp from "./main/Stamp";
 import Header from "./pages/Header";
 import InfoDDD from "./introduce/InfoDDD";
 import InfoStaff from "./introduce/InfoStaff";
