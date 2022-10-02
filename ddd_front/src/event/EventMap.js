@@ -111,11 +111,11 @@ function EventMap() {
   return (
     <>
       <MapHeaderImg>
-        <Title>캠퍼스 맵</Title>
+        <Title>부스 배치도</Title>
         <Contents>
-          학교 건물들의 상대적인 위치와 구조를 확인하세요
+          찾고있는 주점 / 부스의 날짜 별 안내 사항과
           <br />
-          여기저기 솜솜이들의 발자국을 솜쿵솜쿵
+          위치를 확인하세요
         </Contents>
         <img
           src={require("../img/TopImg.png")}
