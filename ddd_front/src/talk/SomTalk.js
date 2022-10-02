@@ -128,7 +128,7 @@ function SomTalk() {
   const [newCmt, setNewCmt] = useState({});
   const { status, data } = useQuery("talk", () => {
     return axios
-      .get("http://127.0.0.1:8000/posts/comments")
+      .get("https://qkrtpdms0521.pythonanywhere.com/posts/comments")
       .then((response) => {
         const i = response.data.length - 1;
         setNewCmt({
@@ -142,7 +142,12 @@ function SomTalk() {
   const queryClient = useQueryClient();
   const { mutate } = useMutation(
     (comment) => {
-      return axios.post("http://127.0.0.1:8000/posts/comments", { comment });
+      return axios.post(
+        "https://qkrtpdms0521.pythonanywhere.com/posts/comments",
+        {
+          comment,
+        }
+      );
     },
     {
       onSuccess: () => {
